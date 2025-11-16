@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.step {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ACACA6;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.step.selected {
+    border: 2px solid #4B81BD;
+}
+
+.step.completed {
+    border: 2px solid #4B81BD;
+    background: #4B81BD;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #ACACA6;
+    z-index: -1;
+}
+
+.percent {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #4B81BD;
+    z-index: 1;
+    transition: width 1s;
+}
+
+.progress-circle {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid #222222;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 4px solid #4B81BD;
+    z-index: 1;
+    transition: border 1s;
+    /* background-color: #4B81BD; */
+}
