@@ -90,7 +90,9 @@ body {
 }
 
 .infopanel-title h2 {
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 800;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
@@ -102,7 +104,8 @@ body {
     text-align: center;
     padding-top: 10px;
     font-size: 22px;
-    font-family: robot-regular;
+    font-family: 'Inter',
+        sans-serif;
     font-weight: 200;
     letter-spacing: 1px;
 }
@@ -125,7 +128,9 @@ body {
     background-color: rgb(32, 32, 32);
     color: white;
     border-radius: 50px;
-    font-family: robot-light;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     font-size: 20px;
     cursor: pointer;
     transition: all 400ms ease-in-out 0s;
@@ -218,16 +223,25 @@ section {
 .info-title {
     margin-bottom: 40px;
     font-size: 32px;
-    font-weight: 900;
-    font-family: robot-bold;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 1px;
 }
 
 .col-sm-12 p {
     font-size: 22px;
-    font-family: robot-regular;
+    font-family: 'Inter',
+        sans-serif;
     margin-bottom: 10px;
     letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.share-button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
 }
 
 .share-button {
@@ -241,7 +255,9 @@ section {
     background-color: transparent;
     transition: all 400ms ease-in-out 0s;
     transform: scale(1);
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
 }
 
 .share-button-dark-mode {
@@ -255,7 +271,9 @@ section {
     background-color: transparent;
     transition: all 400ms ease-in-out 0s;
     transform: scale(1);
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
 }
 
 .share-button:hover {
@@ -265,6 +283,7 @@ section {
 .share-button-dark-mode:hover {
     transform: scale(1.07);
 }
+
 
 .icons-info-container {
     padding: 10px 20px;
@@ -307,14 +326,16 @@ section {
 
 .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 140px;
     background-color: #fff;
     color: #555;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0px;
     position: absolute;
-    font-family: robot-semibold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     z-index: 1;
     top: -1px;
     right: 145%;
@@ -336,14 +357,16 @@ section {
 
 .tooltiptext-darkmode {
     visibility: hidden;
-    width: 120px;
+    width: 140px;
     background-color: #000;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0px;
     position: absolute;
-    font-family: robot-semibold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     z-index: 1;
     top: -1px;
     right: 145%;
@@ -406,15 +429,26 @@ section {
     line-height: 1.875em
 }
 
+.contact-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    line-height: 1.875em
+}
+
 .personal-info-title-text {
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
     opacity: 0.5;
     letter-spacing: 1px;
 }
 
 .langauage-title-text {
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
     opacity: 0.5;
     letter-spacing: 1px;
@@ -430,17 +464,20 @@ section {
 }
 
 .text-uppercase {
-    font-family: 'robot-bold';
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
-    width: 6em;
+    width: 7em;
     letter-spacing: 0.5px;
 }
 
 dd {
     margin-left: 20px;
-    font-family: robot-regular;
+    font-family: 'Inter',
+        sans-serif;
     font-size: 1.05em;
 }
 
@@ -457,13 +494,16 @@ dd {
 }
 
 .progress-title {
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 .progress-text {
     padding-left: 10px;
-    font-family: robot-regular;
+    font-family: 'Inter',
+        sans-serif;
     font-size: 1.09em;
 }
 
@@ -483,7 +523,9 @@ dd {
     margin-bottom: 40px;
     font-size: 32px;
     font-weight: 900;
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
@@ -491,7 +533,9 @@ dd {
     margin-bottom: 40px;
     font-size: 32px;
     font-weight: 900;
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
@@ -523,6 +567,16 @@ dd {
     align-items: center;
 }
 
+.project-container-3 {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    /* align-items: baseline; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .work-exp-container-2 {
     display: flex;
     column-gap: 30px;
@@ -532,7 +586,7 @@ dd {
 
 .work-exp-1-content-info {
     width: 50%;
-    text-align: right;
+    /* text-align: right; */
 }
 
 .project-1-content-info {
@@ -545,9 +599,14 @@ dd {
     text-align: left;
 }
 
-.work-exp-2-content-info {
+.project-3-content-info {
     width: 50%;
     text-align: left;
+}
+
+.work-exp-2-content-info {
+    width: 50%;
+    /* text-align: left; */
 }
 
 .work-exp-time-1 {
@@ -574,6 +633,14 @@ dd {
     position: relative;
 }
 
+.project-laptop-container-3 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+}
+
 .work-exp-time-2 {
     width: 50%;
     display: flex;
@@ -586,7 +653,9 @@ dd {
     background-color: #c6d9e2;
     padding: 10px 20px 10px 20px;
     border-radius: 30px;
-    font-family: robot-semibold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     font-size: 16px;
 }
 
@@ -594,7 +663,9 @@ dd {
     background-color: #c6d9e2;
     padding: 10px 20px 10px 20px;
     border-radius: 30px;
-    font-family: robot-semibold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     font-size: 16px;
     color: #1e1e1e;
 }
@@ -706,14 +777,19 @@ dd {
 }
 
 .job-designation-title {
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 800;
     margin-bottom: 20px;
     font-size: 22px;
     letter-spacing: 1px;
+    /* text-align: right; */
 }
 
 .project-title-text {
-    font-family: robot-bold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 800;
     margin-bottom: 20px;
     font-size: 22px;
     letter-spacing: 1px;
@@ -727,11 +803,13 @@ dd {
 .fortuna-pix-logo a {
     text-decoration: none;
     font-size: 18px;
-    font-family: robot-semibold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     letter-spacing: 1.2px;
     color: #4183c4;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -742,7 +820,9 @@ dd {
 .mitr-logo a {
     text-decoration: none;
     font-size: 18px;
-    font-family: robot-semibold;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 600;
     letter-spacing: 1.2px;
     color: #4183c4;
     display: flex;
@@ -772,9 +852,24 @@ dd {
     border: 3px solid #c6d9e2;
 }
 
+.work-discription {}
+
+.work-discription span {
+    font-family: 'Inter',
+        sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    /* text-align: right; */
+}
+
 p {
-    font-family: robot-regular;
-    font-size: 16px;
+    font-family: 'Inter',
+        sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
     letter-spacing: 0.5px;
 }
 
@@ -913,7 +1008,8 @@ p {
     font-size: 14px;
     right: 0px;
     top: -25px;
-    font-family: robot-regular;
+    font-family: 'Inter',
+        sans-serif;
 }
 
 progress {
@@ -990,7 +1086,8 @@ progress::-webkit-progress-value {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    font-family: robot-regular;
+    font-family: 'Inter',
+        sans-serif;
     font-size: 12px;
 }
 
@@ -1005,6 +1102,65 @@ progress::-webkit-progress-value {
     padding: 6px 8px;
     border-radius: 20px;
 }
+
+
+#lets_connect_img {
+    width: 400px;
+}
+
+#contactForm {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm input {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 1em;
+    resize: none;
+    margin: 10px 0px;
+}
+
+#contactForm textarea {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 1em;
+    resize: none;
+    margin: 10px 0px;
+}
+
+#contactForm span {
+    font-family: 'Inter',
+        sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contactSubmit {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin: 10px 0px;
+    font-family: 'Inter',
+        sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #d6eef9;
+    color: #3c6e86;
+}
+
+.contactSubmitSelected {
+    background-color: #96f1a0;
+    color: #316937;
+}
+
+.ri-send-plane-fill {
+    color: #3c6e86;
+    font-size: 24px;
+}
+
+
 
 /*Responsive design code.*/
 @media screen and (max-width: 880px) {
@@ -1129,6 +1285,12 @@ progress::-webkit-progress-value {
         flex-direction: column;
     }
 
+    .contact-row {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .vertical-line {
         display: none;
     }
@@ -1192,6 +1354,14 @@ progress::-webkit-progress-value {
     .work-exp-time-2 {
         width: 100%;
     }
+
+    #contactForm {
+        width: 280px;
+    }
+
+    #lets_connect_img {
+        width: 280px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1205,12 +1375,22 @@ progress::-webkit-progress-value {
         row-gap: 20px
     }
 
+    .project-container-3 {
+        flex-direction: column;
+        row-gap: 20px
+    }
+
     .project-1-content-info {
         width: 100%;
         text-align: left;
     }
 
     .project-2-content-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    .project-3-content-info {
         width: 100%;
         text-align: left;
     }
@@ -1242,6 +1422,10 @@ progress::-webkit-progress-value {
     .project-laptop-container-2 {
         width: 100%;
         justify-content: flex-start;
+    }
+
+    .project-laptop-container-3 {
+        width: 100%;
     }
 }
 
@@ -1275,10 +1459,7 @@ progress::-webkit-progress-value {
     }
 }
 
-
-
-
-@font-face {
+/* @font-face {
     font-family: robot-regular;
     src: url(/style/font/Roboto-Regular.ttf);
 }
@@ -1296,4 +1477,4 @@ progress::-webkit-progress-value {
 @font-face {
     font-family: robot-light;
     src: url(/style/font/Roboto-ExtraLight.ttf);
-}
+} */

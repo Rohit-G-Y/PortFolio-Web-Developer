@@ -27,6 +27,8 @@ let eductionSection = document.querySelector('#education-info');
 let educationIconBtn = document.querySelector('#education-icon-btn');
 let projectSection = document.querySelector('#project-info');
 let projectIconBtn = document.querySelector('#project-icon-btn');
+let letsconnectSection = document.querySelector('#letsconnect-info');
+let letsconnectbtn = document.querySelector('#letsconnect-icon-btn');
 let langSkills = document.querySelectorAll('.lang');
 let linkSocialICons = document.querySelectorAll('.icon-link-buttons');
 let progressJS = document.querySelector('.progress-bar-js');
@@ -42,7 +44,10 @@ let progressPercent2 = document.querySelector('.parcent2');
 let progressPercent3 = document.querySelector('.parcent3');
 let scrollUpBtn = document.querySelector('.scroll-up-button');
 let mainSectionContainer = document.querySelector('#main-section-container');
-// console.log(progressPercent);
+let contactForm = document.querySelector('#contactForm');
+let contactSubmit = document.querySelector('.contactSubmit');
+let contactSubmittxt = document.querySelector('#contactSubmittxt');
+let sendMessegeIcon = document.querySelector('.ri-send-plane-fill');
 
 window.onload = function () { }
 
@@ -195,6 +200,10 @@ projectIconBtn.addEventListener('click', () => {
     projectSection.scrollIntoView({ behavior: "smooth", inline: "nearest" });
 });
 
+letsconnectbtn.addEventListener('click', () => {
+    letsconnectSection.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+})
+
 window.onscroll = function () {
     console.log('scroll')
     scrollFunction();
@@ -204,3 +213,36 @@ function scrollFunction() {
     document.body.scrollTop > 20 || document.documentElement.scrollTop > 30 ? scrollUpBtn.style.display = 'flex' : scrollUpBtn.style.display = 'none';
 }
 
+//Share CV waya email code
+contactForm.addEventListener('click', function (event) {
+    console.log(contactSubmit.classList);
+
+    event.preventDefault();
+    if (document.getElementById("nameText").value == '' || document.getElementById("emailText").value == '' || document.getElementById("messageText").value == '') return;
+
+    if (contactSubmit.classList[0] === 'contactSubmit') {
+        contactSubmit.classList.add('contactSubmitSelected');
+        contactSubmittxt.textContent = 'Message Sent ';
+        sendMessegeIcon.style.color = "#316937";
+    }
+
+    setTimeout(function () {
+        if (contactSubmit.classList[0] === 'contactSubmit') {
+            contactSubmit.classList.remove('contactSubmitSelected');
+            contactSubmittxt.textContent = 'Send Message ';
+            sendMessegeIcon.style.color = "#3c6e86";
+        }
+    }, 2000);
+
+    emailjs.send("service_cox1g97", "template_d7svt7s", {
+        name: document.getElementById("nameText").value,
+        email: document.getElementById("emailText").value,
+        message: document.getElementById("messageText").value
+    }).then(() => console.log('Message Sent!'), (error) => console.log('Message Faild: ' + error));
+
+
+
+    document.getElementById("nameText").value = '';
+    document.getElementById("emailText").value = '';
+    document.getElementById("messageText").value = '';
+});
