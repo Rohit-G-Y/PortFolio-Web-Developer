@@ -125,12 +125,12 @@ body {
     padding: 15px;
     width: 200px;
     border: none;
-    background-color: rgb(32, 32, 32);
-    color: white;
+    background-color: #d6eef9;
+    color: #3c6e86;
     border-radius: 50px;
     font-family: 'Inter',
         sans-serif;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 20px;
     cursor: pointer;
     transition: all 400ms ease-in-out 0s;
@@ -140,6 +140,23 @@ body {
 
 .cv-download-button:hover {
     transform: scale(1.1);
+}
+
+.cv-download-button-dark-mode {
+    padding: 15px;
+    width: 200px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out 0s;
+    transform: scale(1);
+    letter-spacing: 1px;
 }
 
 .social-info-icons {
@@ -208,6 +225,7 @@ body {
     display: grid;
     grid-area: mainContainer;
     min-height: 1px;
+    box-shadow: none;
 }
 
 .intro-section-one-container {
@@ -355,7 +373,7 @@ section {
     border-color: transparent transparent transparent #fff;
 }
 
-.tooltiptext-darkmode {
+.tooltiptext-dark-mode {
     visibility: hidden;
     width: 140px;
     background-color: #000;
@@ -370,11 +388,11 @@ section {
     z-index: 1;
     top: -1px;
     right: 145%;
-    /* box-shadow: 0 4px 8px 0 lightgray; */
+    box-shadow: none;
     font-size: 18px;
 }
 
-.tooltip .tooltiptext-darkmode::after {
+.tooltip .tooltiptext-dark-mode::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -390,7 +408,7 @@ section {
         visibility: visible;
     }
 
-    .tooltiptext-darkmode {
+    .tooltiptext-dark-mode {
         visibility: visible;
     }
 }
@@ -660,14 +678,14 @@ dd {
 }
 
 .time-dark-mode {
-    background-color: #c6d9e2;
+    background-color: #000000;
     padding: 10px 20px 10px 20px;
     border-radius: 30px;
     font-family: 'Inter',
         sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #1e1e1e;
+    color: #ffffff;
 }
 
 .vertical-line {
@@ -1254,7 +1272,7 @@ progress::-webkit-progress-value {
         right: -185%;
     }
 
-    .tooltiptext-darkmode {
+    .tooltiptext-dark-mode {
         top: 40px;
         right: -185%;
     }

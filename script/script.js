@@ -48,6 +48,7 @@ let contactForm = document.querySelector('#contactForm');
 let contactSubmit = document.querySelector('.contactSubmit');
 let contactSubmittxt = document.querySelector('#contactSubmittxt');
 let sendMessegeIcon = document.querySelector('.ri-send-plane-fill');
+let downloadCBBtn = document.querySelector('.cv-download-button');
 
 window.onload = function () { }
 
@@ -67,28 +68,44 @@ progressPercent2.style.width = "85%";
 progressPercent3.style.width = "75%";
 
 progressJS.setAttribute('value', '85');
-progressReact.setAttribute('value', '60');
+progressReact.setAttribute('value', '40');
 progressHtml.setAttribute('value', '80');
-progressNode.setAttribute('value', '60');
+progressNode.setAttribute('value', '80');
 progressGit.setAttribute('value', '80');
 
 console.log(progressJS);
 
-function darkMode(object, className) {
-    object.forEach((e) => {
+function darkModeSwitch(objectArr, className) {
+    objectArr.forEach((e) => {
         e.className = className;
     });
 }
 
-function lighMode(object, className) {
-    object.forEach((e) => {
-        e.className = className;
-    });
+let darkModeMap = [
+    { element: horizontalLine, class: 'horizontal-line-dark-mode' },
+    { element: projecthorizontalLine, class: 'project-horizontal-line-dark-mode' },
+    { element: linkSocialICons, class: 'icon-link-buttons-dark-mode' },
+    { element: tooltipText, class: 'tooltiptext-dark-mode' },
+    { element: timeLabel, class: 'time-dark-mode' },
+    { element: informationContainer, class: 'information-container-dark-mode' },
+    { element: socialIcons, class: 'social-icon-links-dark-mode' },
+    { element: langSkills, class: 'lang-dark-mode' },
+];
+
+
+function switchToDarkMode(enable) {
+    darkModeMap.forEach((set) => {
+        set.element.forEach((elm) => {
+            elm.classList.toggle(set.class, enable);
+        });
+    })
 }
 
 moon_icon.addEventListener('click', function (e) {
+
     moon_icon.style.display = 'none';
     sun_icon.style.display = 'inline-block';
+
     sun_icon.style.color = '#b5b5b5';
     mainBody.style.backgroundColor = '#000000';
     mainBody.style.color = '#ffffff';
@@ -99,21 +116,19 @@ moon_icon.addEventListener('click', function (e) {
     iconInfoContainer.className = 'icons-info-container-dark-mode';
     shareButton.className = 'share-button-dark-mode';
     scrollUpBtn.className = 'scroll-up-button-dark-mode';
-    darkMode(horizontalLine, 'horizontal-line-dark-mode');
-    darkMode(projecthorizontalLine, 'project-horizontal-line-dark-mode');
-    darkMode(linkSocialICons, 'icon-link-buttons-dark-mode');
-    darkMode(tooltipText, 'tooltiptext-darkmode');
-    darkMode(timeLabel, 'time-dark-mode');
-    darkMode(informationContainer, 'information-container-dark-mode');
-    darkMode(socialIcons, 'social-icon-links-dark-mode');
-    darkMode(langSkills, 'lang-dark-mode');
+    downloadCBBtn.className = 'cv-download-button-dark-mode';
+
+    switchToDarkMode(true);
+
     document.body.style.backgroundImage = `url('/images/bg_dark_mode.png')`;
 
 });
 
 sun_icon.addEventListener('click', function (e) {
+
     moon_icon.style.display = 'inline-block';
     sun_icon.style.display = 'none';
+
     mainBody.style.backgroundColor = '#ffffff';
     mainBody.style.color = '#000000';
     infoContainer.className = 'info-container';
@@ -123,15 +138,10 @@ sun_icon.addEventListener('click', function (e) {
     iconInfoContainer.className = 'icons-info-container';
     shareButton.className = 'share-button';
     scrollUpBtn.className = 'scroll-up-button';
-    // expLinkIconBtn.className = 'icon-link-buttons';
-    lighMode(horizontalLine, 'horizontal-line');
-    darkMode(projecthorizontalLine, 'project-horizontal-line')
-    lighMode(linkSocialICons, 'icon-link-buttons');
-    lighMode(tooltipText, 'tooltiptext');
-    lighMode(timeLabel, 'time');
-    lighMode(informationContainer, 'information-container');
-    lighMode(socialIcons, 'social-icon-links');
-    darkMode(langSkills, 'lang');
+    downloadCBBtn.className = 'cv-download-button';
+
+    switchToDarkMode(false);
+
     document.body.style.backgroundImage = `url('/images/bg.png')`
 });
 
